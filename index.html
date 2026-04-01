@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dani Black Surf Coach | Bali Surf School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFAF5;
+            color: #1E2A2F;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo, .nav-links a, .btn {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(253, 250, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            color: #E67E22;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            color: #1E2A2F;
+        }
+
+        .logo-text span {
+            color: #E67E22;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1E2A2F;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #E67E22;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1E2A2F;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: #E67E22;
+            color: white;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #D35400;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #E67E22;
+            color: #E67E22;
+        }
+
+        .btn-outline:hover {
+            background: #E67E22;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: #1E2A2F;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #5A6B6F;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #2C3E3F;
+            font-size: 1.05rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: #E67E22;
+            margin-bottom: 12px;
+        }
+
+        .feature-item h4 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2);
+        }
+
+        /* Lessons Cards */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card-content {
+            padding: 28px;
+        }
+
+        .lesson-icon {
+            font-size: 2.5rem;
+            color: #E67E22;
+            margin-bottom: 16px;
+        }
+
+        .lesson-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1A4D8C;
+            margin: 16px 0 8px;
+        }
+
+        .price small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #5A6B6F;
+        }
+
+        .lesson-desc {
+            color: #5A6B6F;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 28px;
+            border-radius: 28px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #2C3E3F;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #1A4D8C;
+        }
+
+        /* Location & Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: white;
+            padding: 18px 24px;
+            border-radius: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: #E67E22;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #1E2A2F;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .map-container {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1A4D8C;
+            color: white;
+            padding: 48px 0 24px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #E67E22;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 32px;
+            border-radius: 28px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <i class="fas fa-water logo-icon"></i>
+            <div class="logo-text">DANI BLACK <span>SURF COACH</span></div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#lessons">Lessons</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="btn btn-primary" id="bookNowNav">Book Now</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Catch Your Wave<br>With Dani Black</h1>
+            <p>Bali's premium surf coaching since 2011. Certified ASI instructors. From first wave to barrel hunting.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary book-now-trigger">Book a Lesson →</a>
+                <a href="#lessons" class="btn btn-outline">View Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="about">
+        <section>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;">More Than a Surf School</h2>
+                    <p>Dani Black Surf Coach is a Bali surf school operating since 2011 and gained an excellent reputation on the island. Our team of experienced certified local and expat surf coaches work with surfers of all ages.</p>
+                    <p>We offer private and group surfing lessons for beginners, guiding and surf trips for intermediate and advanced surfers of all levels. In our lessons we apply proven consistent teaching method, based on Academy of Surfing Instructors programs (ASI).</p>
+                    <p>Our headquarters located at the front of Canggu, Bali — just steps from the best beginner and intermediate waves.</p>
+                    <div class="features">
+                        <div class="feature-item"><i class="fas fa-calendar-alt"></i><h4>Since 2011</h4><p>14 years of excellence</p></div>
+                        <div class="feature-item"><i class="fas fa-certificate"></i><h4>ASI Certified</h4><p>International standards</p></div>
+                        <div class="feature-item"><i class="fas fa-users"></i><h4>All Levels</h4><p>From zero to hero</p></div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1541447271487-09612b3f49f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surfing Bali">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="lessons">
+        <section>
+            <h2 class="section-title">Surf Lessons & Packages</h2>
+            <p class="section-subtitle">Choose the experience that fits your level and goals</p>
+            <div class="lessons-grid">
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-user-plus"></i></div><h3>Trial Lesson</h3><p class="lesson-desc">Perfect for first-timers. Learn the basics, safety, and stand up on your first wave.</p><div class="price">450K IDR <small>/ 1.5h</small></div><div class="price">$29 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-user"></i></div><h3>Private Lesson</h3><p class="lesson-desc">1-on-1 coaching with personalized feedback. Fastest way to progress.</p><div class="price">600K IDR <small>/ 2h</small></div><div class="price">$38 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-user-friends"></i></div><h3>Semi-Private</h3><p class="lesson-desc">Perfect for couples or friends. Same level, shared stoke.</p><div class="price">450K IDR <small>/ person</small></div><div class="price">$29 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-users"></i></div><h3>Group Lesson</h3><p class="lesson-desc">Small groups (3-4). Fun, social, and affordable.</p><div class="price">350K IDR <small>/ person</small></div><div class="price">$22 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-map-marked-alt"></i></div><h3>Surf Trip / Guiding</h3><p class="lesson-desc">For intermediate/advanced. Explore Bali's best breaks with a local guide.</p><div class="price">800K IDR <small>/ 3h+</small></div><div class="price">$51 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+                <div class="lesson-card"><div class="card-content"><div class="lesson-icon"><i class="fas fa-star"></i></div><h3>5-Lesson Package</h3><p class="lesson-desc">Commit to progress. Best value for improvement.</p><div class="price">2.5M IDR <small>/ 5 x 2h</small></div><div class="price">$160 USD</div><a href="#" class="btn btn-primary book-now-trigger" style="margin-top: 16px; display: inline-block;">Book Now</a></div></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="gallery">
+        <section>
+            <h2 class="section-title">Moments From the Ocean</h2>
+            <p class="section-subtitle">Real stoke, real waves, real Bali</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1515023115689-589c4b2b2c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surf lesson"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset surf"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wave"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surfer"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coaching"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali surf"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">What Our Students Say</h2>
+            <p class="section-subtitle">Real experiences from the water</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card"><p class="testimonial-text">"Best surf coaching in Bali! Dani's team is super professional and patient. I stood up on my first wave. Highly recommend!"</p><p class="testimonial-author">— Sarah, Australia</p></div>
+                <div class="testimonial-card"><p class="testimonial-text">"The ASI certified instructors really know their stuff. Progressed so much in just one week. Will come back!"</p><p class="testimonial-author">— Tom, UK</p></div>
+                <div class="testimonial-card"><p class="testimonial-text">"Amazing experience! Felt safe the whole time and caught so many waves. Thank you Dani Black team!"</p><p class="testimonial-author">— Lisa, Germany</p></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="contact">
+        <section>
+            <h2 class="section-title">Find Us in Canggu</h2>
+            <p class="section-subtitle">Come say hello — we're right at the heart of Bali's surf culture</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/6283169444980?text=Hello!%20I'd%20like%20to%20book%20a%20surf%20lesson" target="_blank">+62 831-6944-4980 (WhatsApp)</a></div>
+                    <div class="contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/deniblack_surfcoachbali" target="_blank">@deniblack_surfcoachbali</a></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong>Location:</strong><br>84QJ+MPP, Canggu, Kuta Utara, Bali</div></div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=84QJ%2BMPP%2C%20Canggu%2C%20Kec.%20Kuta%20Utara%2C%20Kabupaten%20Badung%2C%20Bali%2C%20Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo"><i class="fas fa-water" style="color:#E67E22"></i><span style="font-weight:800">DANI BLACK SURF COACH</span></div>
+            <div class="social-links"><a href="https://www.instagram.com/deniblack_surfcoachbali" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/6283169444980" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="copyright">© 2026 Dani Black Surf Coach | Bali's Premier Surf Coaching Since 2011</div>
+    </div>
+</footer>
+
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 style="margin-bottom: 20px;">Book Your Surf Lesson</h3>
+        <form id="bookingForm">
+            <div class="form-group"><input type="text" id="name" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="tel" id="phone" placeholder="WhatsApp Number" required></div>
+            <div class="form-group"><input type="date" id="date" required></div>
+            <div class="form-group"><select id="lessonType"><option>Trial Lesson (450K IDR)</option><option>Private Lesson (600K IDR)</option><option>Semi-Private (450K IDR/person)</option><option>Group Lesson (350K IDR/person)</option><option>Surf Trip (800K IDR)</option><option>5-Lesson Package (2.5M IDR)</option></select></div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send via WhatsApp</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('bookingModal');
+    const btns = document.querySelectorAll('.book-now-trigger');
+    const closeBtn = document.querySelector('.close-modal');
+    btns.forEach(btn => btn.onclick = (e) => { e.preventDefault(); modal.style.display = 'flex'; });
+    closeBtn.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; };
+    document.getElementById('bookingForm').onsubmit = (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const lesson = document.getElementById('lessonType').value;
+        const msg = `Hello! I'd like to book a surf lesson.%0AName: ${name}%0ALesson: ${lesson}%0ADate: ${date}%0APhone: ${phone}`;
+        window.open(`https://wa.me/6283169444980?text=${msg}`, '_blank');
+        modal.style.display = 'none';
+        document.getElementById('bookingForm').reset();
+    };
+    document.getElementById('mobileMenuBtn').onclick = () => { alert('Navigation: About • Lessons • Gallery • Contact'); };
+</script>
+</body>
+</html>
