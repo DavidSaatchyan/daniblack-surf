@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Deni Black | Surf School Bali | Canggu Surf Lessons</title>
+    <title>Deni Black | Surf School Bali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -17,20 +17,15 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #FFFFFF;
-            color: #1a2c2e;
+            background: #ffffff;
+            color: #1a1a1a;
             line-height: 1.5;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .logo, .nav-links a, .btn {
-            font-family: 'Montserrat', sans-serif;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 24px;
         }
 
         /* Header */
@@ -39,11 +34,11 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
             z-index: 1000;
             padding: 20px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .header-inner {
@@ -52,42 +47,43 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 24px;
         }
 
         .logo {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: -0.3px;
-            color: #1a2c2e;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #1a1a1a;
         }
 
         .logo span {
             font-weight: 400;
-            color: #6b8c8c;
+            color: #888;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 36px;
             align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #1a2c2e;
+            color: #1a1a1a;
+            font-size: 0.85rem;
             font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.9rem;
+            transition: opacity 0.2s;
         }
 
         .nav-links a:hover {
-            color: #2c7a7a;
+            opacity: 0.6;
         }
 
         .mobile-menu-btn {
             display: none;
-            font-size: 26px;
+            font-size: 24px;
             background: none;
             border: none;
             cursor: pointer;
@@ -96,102 +92,73 @@
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 12px 28px;
-            border-radius: 100px;
-            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 500;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
+            transition: all 0.2s;
+            font-size: 0.8rem;
             cursor: pointer;
-            font-size: 0.85rem;
+            border: none;
         }
 
         .btn-primary {
-            background: #2c7a7a;
+            background: #1a1a1a;
             color: white;
         }
 
         .btn-primary:hover {
-            background: #1f5f5f;
-            transform: translateY(-2px);
+            background: #333;
         }
 
         .btn-outline {
             background: transparent;
-            border: 1.5px solid rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.6);
             color: white;
         }
 
         .btn-outline:hover {
             background: white;
-            color: #2c7a7a;
-            border-color: white;
+            color: #1a1a1a;
         }
 
         /* Hero */
         .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%), url('https://images.pexels.com/photos/3820922/pexels-photo-3820922.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            min-height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.25)), url('https://images.pexels.com/photos/3820922/pexels-photo-3820922.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover;
             background-position: center 35%;
             display: flex;
             align-items: center;
             text-align: center;
             color: white;
+            margin-top: 70px;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 0 24px;
         }
 
         .hero h1 {
-            font-size: 3.8rem;
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 600;
             margin-bottom: 20px;
-            line-height: 1.2;
+            letter-spacing: -0.5px;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 32px;
             opacity: 0.9;
+            line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
             gap: 16px;
             justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Trust Bar */
-        .trust-bar {
-            background: #faf9f7;
-            padding: 16px 0;
-            border-bottom: 1px solid #f0ede8;
-        }
-
-        .trust-items {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            flex-wrap: wrap;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #4a6a6a;
-        }
-
-        .trust-item i {
-            color: #2c7a7a;
-            font-size: 1rem;
         }
 
         /* Sections */
@@ -200,20 +167,20 @@
         }
 
         .section-title {
+            font-family: 'Montserrat', sans-serif;
             text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 16px;
-            color: #1a2c2e;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.3px;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #6b8c8c;
-            max-width: 650px;
-            margin: 0 auto 48px;
-            font-size: 1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 56px;
+            font-size: 0.9rem;
         }
 
         /* About */
@@ -226,132 +193,121 @@
 
         .about-text p {
             margin-bottom: 20px;
-            color: #4a6a6a;
+            color: #444;
             line-height: 1.6;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
-        .stats-row {
+        .stats {
             display: flex;
-            gap: 20px;
+            gap: 32px;
             margin: 32px 0 24px;
         }
 
-        .stat-item {
-            text-align: center;
-            flex: 1;
-        }
-
-        .stat-number {
+        .stat h4 {
             font-size: 1.6rem;
-            font-weight: 700;
-            color: #2c7a7a;
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
-        .stat-label {
+        .stat p {
             font-size: 0.7rem;
-            font-weight: 500;
-            color: #8aa8a8;
+            color: #888;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .about-image img {
             width: 100%;
-            border-radius: 24px;
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+            border-radius: 16px;
         }
 
         /* Lessons Cards */
         .lessons-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 40px;
         }
 
         .lesson-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 32px;
-            transition: all 0.3s ease;
-            border: 1px solid #f0ede8;
             text-align: center;
+            padding: 32px 24px;
+            border: 1px solid #f0f0f0;
+            border-radius: 20px;
+            transition: all 0.2s;
         }
 
         .lesson-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
-            border-color: #e0dbd2;
+            border-color: #ddd;
         }
 
         .lesson-icon {
             font-size: 2rem;
-            color: #2c7a7a;
+            color: #1a1a1a;
             margin-bottom: 20px;
         }
 
         .lesson-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
+            font-size: 1.2rem;
             font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .duration {
-            font-size: 0.8rem;
-            color: #8aa8a8;
+            font-size: 0.75rem;
+            color: #888;
             margin-bottom: 12px;
         }
 
         .lesson-desc {
-            font-size: 0.85rem;
-            color: #6b8c8c;
-            margin-bottom: 20px;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 24px;
             line-height: 1.5;
         }
 
         .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1f5f5f;
+            font-size: 1.4rem;
+            font-weight: 600;
             margin: 16px 0;
         }
 
         .price small {
             font-size: 0.7rem;
             font-weight: 400;
-            color: #8aa8a8;
+            color: #888;
         }
 
         .card-btn {
             width: 100%;
-            background: #faf9f7;
+            background: #f8f8f8;
             padding: 10px;
-            border-radius: 100px;
-            font-weight: 600;
+            border-radius: 30px;
             font-size: 0.8rem;
-            color: #2c7a7a;
-            transition: all 0.3s;
+            font-weight: 500;
+            color: #1a1a1a;
             cursor: pointer;
             border: none;
+            transition: all 0.2s;
         }
 
-        .lesson-card:hover .card-btn {
-            background: #2c7a7a;
+        .card-btn:hover {
+            background: #1a1a1a;
             color: white;
         }
 
-        /* Video Grid — компактный */
+        /* Video Grid */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 24px;
         }
 
         .video-card {
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
             aspect-ratio: 9 / 16;
-            background: #f0ede8;
+            background: #f5f5f5;
         }
 
         .video-card iframe {
@@ -364,103 +320,81 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .feature-card {
+            gap: 32px;
             text-align: center;
-            padding: 28px 16px;
-            background: #faf9f7;
-            border-radius: 24px;
-        }
-
-        .feature-icon {
-            font-size: 1.8rem;
-            color: #2c7a7a;
-            margin-bottom: 12px;
         }
 
         .feature-card h4 {
             font-size: 1rem;
-            margin-bottom: 8px;
             font-weight: 600;
+            margin: 12px 0 8px;
         }
 
         .feature-card p {
-            font-size: 0.8rem;
-            color: #6b8c8c;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .feature-icon {
+            font-size: 1.6rem;
+            color: #1a1a1a;
         }
 
         /* Testimonials */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
+            gap: 32px;
         }
 
         .testimonial-card {
-            background: #faf9f7;
-            padding: 28px;
-            border-radius: 24px;
+            background: #fafafa;
+            padding: 32px;
+            border-radius: 20px;
         }
 
         .testimonial-text {
             font-style: italic;
-            color: #4a6a6a;
+            color: #444;
             margin-bottom: 20px;
-            line-height: 1.5;
-            font-size: 0.9rem;
+            line-height: 1.6;
+            font-size: 0.85rem;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #2c7a7a;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         /* FAQ */
         .faq-grid {
-            max-width: 720px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: #faf9f7;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
         }
 
         .faq-question {
-            padding: 18px 24px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: 0.95rem;
-        }
-
-        .faq-question i {
-            color: #2c7a7a;
-            font-size: 0.8rem;
-            transition: transform 0.3s;
+            font-size: 0.9rem;
         }
 
         .faq-answer {
-            padding: 0 24px 20px 24px;
-            color: #6b8c8c;
+            color: #666;
             font-size: 0.85rem;
-            display: none;
             line-height: 1.5;
+            margin-top: 12px;
+            display: none;
         }
 
         .faq-item.active .faq-answer {
             display: block;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
         }
 
         /* Contact */
@@ -473,45 +407,31 @@
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 16px;
-            background: #faf9f7;
-            padding: 16px 24px;
-            border-radius: 60px;
-            transition: all 0.2s;
-        }
-
-        .contact-item:hover {
-            background: #2c7a7a;
-        }
-
-        .contact-item:hover i,
-        .contact-item:hover a,
-        .contact-item:hover div {
-            color: white;
+            padding: 16px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .contact-item i {
-            font-size: 1.3rem;
-            color: #2c7a7a;
+            width: 28px;
+            color: #1a1a1a;
         }
 
         .contact-item a {
             text-decoration: none;
-            color: #1a2c2e;
-            font-weight: 500;
-            font-size: 0.9rem;
+            color: #1a1a1a;
+            font-size: 0.85rem;
         }
 
         .map-container {
-            border-radius: 24px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
 
         iframe {
@@ -523,9 +443,9 @@
 
         /* Footer */
         footer {
-            background: #1a2c2e;
-            color: white;
+            background: #fafafa;
             padding: 48px 0 24px;
+            border-top: 1px solid #f0f0f0;
         }
 
         .footer-content {
@@ -538,13 +458,14 @@
         }
 
         .footer-logo {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .footer-logo span {
             font-weight: 400;
-            color: #8aa8a8;
+            color: #888;
         }
 
         .social-links {
@@ -553,21 +474,21 @@
         }
 
         .social-links a {
-            color: white;
-            font-size: 1.2rem;
-            transition: color 0.2s;
+            color: #1a1a1a;
+            font-size: 1rem;
+            opacity: 0.6;
         }
 
         .social-links a:hover {
-            color: #2c7a7a;
+            opacity: 1;
         }
 
         .copyright {
             text-align: center;
             padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid #f0f0f0;
             font-size: 0.7rem;
-            color: rgba(255,255,255,0.5);
+            color: #888;
         }
 
         /* Modal */
@@ -578,8 +499,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(5px);
+            background: rgba(0,0,0,0.6);
             z-index: 2000;
             align-items: center;
             justify-content: center;
@@ -588,7 +508,7 @@
         .modal-content {
             background: white;
             padding: 32px;
-            border-radius: 28px;
+            border-radius: 24px;
             max-width: 450px;
             width: 90%;
             position: relative;
@@ -598,39 +518,31 @@
             position: absolute;
             top: 16px;
             right: 20px;
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .form-group input, .form-group select {
             width: 100%;
             padding: 12px 16px;
-            border: 1px solid #e0dbd2;
-            border-radius: 60px;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px;
             font-size: 0.85rem;
             font-family: inherit;
-            background: white;
-        }
-
-        .form-group select {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%232c7a7a" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            appearance: none;
         }
 
         .form-group input:focus, .form-group select:focus {
             outline: none;
-            border-color: #2c7a7a;
+            border-color: #aaa;
         }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .lessons-grid, .features-grid {
+            .lessons-grid, .features-grid, .video-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -643,7 +555,7 @@
                 display: block;
             }
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             .about-grid, .contact-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
@@ -652,10 +564,7 @@
                 grid-template-columns: 1fr;
             }
             .section-title {
-                font-size: 1.8rem;
-            }
-            .container {
-                padding: 0 24px;
+                font-size: 1.6rem;
             }
             section {
                 padding: 60px 0;
@@ -674,7 +583,7 @@
                 <a href="#lessons">Lessons</a>
                 <a href="#media">Moments</a>
                 <a href="#contact">Contact</a>
-                <a href="#" class="btn btn-primary" id="bookNowNav">Book →</a>
+                <a href="#" class="btn btn-primary" id="bookNowNav">Book Now</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
         </nav>
@@ -684,8 +593,8 @@
 <main>
     <section class="hero">
         <div class="hero-content">
-            <h1>Catch Your Wave.<br>With Deni Black.</h1>
-            <p>Bali's most trusted surf school since 2011. ASI certified instructors.<br>From first wave to barrel hunter.</p>
+            <h1>Catch Your Wave</h1>
+            <p>Bali's premium surf coaching since 2011. ASI certified instructors. From first wave to barrel hunting.</p>
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary book-now-trigger">Book a Lesson →</a>
                 <a href="#lessons" class="btn btn-outline">View Packages</a>
@@ -693,28 +602,17 @@
         </div>
     </section>
 
-    <div class="trust-bar">
-        <div class="container">
-            <div class="trust-items">
-                <div class="trust-item"><i class="fas fa-calendar-alt"></i><span>Since 2011</span></div>
-                <div class="trust-item"><i class="fas fa-certificate"></i><span>ASI Certified</span></div>
-                <div class="trust-item"><i class="fas fa-shield-alt"></i><span>100% Safety</span></div>
-                <div class="trust-item"><i class="fas fa-map-marker-alt"></i><span>Canggu, Bali</span></div>
-            </div>
-        </div>
-    </div>
-
     <div class="container" id="about">
         <section>
             <div class="about-grid">
                 <div class="about-text">
-                    <h2 class="section-title" style="text-align: left; font-size: 1.8rem;">More Than a Surf School</h2>
+                    <h2 class="section-title" style="text-align: left;">More Than a Surf School</h2>
                     <p>Deni Black Surf School has been operating in Bali since 2011, building an excellent reputation across the island. Our team of certified local and expat instructors works with surfers of all ages — from first-timers to advanced wave riders.</p>
                     <p>We apply proven teaching methods based on the Academy of Surfing Instructors (ASI) programs. Safety, progression, and stoke are at the heart of everything we do.</p>
-                    <div class="stats-row">
-                        <div class="stat-item"><div class="stat-number">14+</div><div class="stat-label">Years</div></div>
-                        <div class="stat-item"><div class="stat-number">ASI</div><div class="stat-label">Certified</div></div>
-                        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Safety</div></div>
+                    <div class="stats">
+                        <div class="stat"><h4>14+</h4><p>Years</p></div>
+                        <div class="stat"><h4>ASI</h4><p>Certified</p></div>
+                        <div class="stat"><h4>100%</h4><p>Safety</p></div>
                     </div>
                     <p><strong>📍 Headquarters:</strong> Frontline Canggu, Bali — steps from the best breaks.</p>
                 </div>
@@ -727,8 +625,8 @@
 
     <div class="container" id="lessons">
         <section>
-            <h2 class="section-title">Surf Lessons & Prices</h2>
-            <p class="section-subtitle">Choose your experience — tailored to your level</p>
+            <h2 class="section-title">Our Lessons & Packages</h2>
+            <p class="section-subtitle">Choose the perfect package for your skill level</p>
             <div class="lessons-grid">
                 <div class="lesson-card" data-lesson="Kids Lesson (400K IDR)">
                     <div class="lesson-icon"><i class="fas fa-child"></i></div>
@@ -760,18 +658,12 @@
 
     <div class="container" id="media">
         <section>
-            <h2 class="section-title">Real Moments. Real Progression.</h2>
-            <p class="section-subtitle">See what surfing with Deni Black looks like</p>
+            <h2 class="section-title">Moments From the Ocean</h2>
+            <p class="section-subtitle">Real stoke, real waves, real Bali</p>
             <div class="video-grid">
-                <div class="video-card">
-                    <iframe src="https://www.instagram.com/p/DSR40TJkQpR/embed" allowfullscreen></iframe>
-                </div>
-                <div class="video-card">
-                    <iframe src="https://www.instagram.com/p/DV3APkQkXtQ/embed" allowfullscreen></iframe>
-                </div>
-                <div class="video-card">
-                    <iframe src="https://www.instagram.com/p/DVKaFy0Et93/embed" allowfullscreen></iframe>
-                </div>
+                <div class="video-card"><iframe src="https://www.instagram.com/p/DSR40TJkQpR/embed" allowfullscreen></iframe></div>
+                <div class="video-card"><iframe src="https://www.instagram.com/p/DV3APkQkXtQ/embed" allowfullscreen></iframe></div>
+                <div class="video-card"><iframe src="https://www.instagram.com/p/DVKaFy0Et93/embed" allowfullscreen></iframe></div>
             </div>
         </section>
     </div>
@@ -781,10 +673,10 @@
             <h2 class="section-title">Why Deni Black</h2>
             <p class="section-subtitle">What makes us different</p>
             <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-certificate"></i></div><h4>ASI Certified Coaches</h4><p>International standards. Safe progression.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-calendar-alt"></i></div><h4>Since 2011</h4><p>14+ years of excellence.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div><h4>Prime Location</h4><p>Frontline Canggu. Best waves.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-camera"></i></div><h4>Free Photos & Videos</h4><p>We document your progress.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-certificate"></i></div><h4>ASI Certified Coaches</h4><p>International standards</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-calendar-alt"></i></div><h4>Since 2011</h4><p>14+ years of excellence</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div><h4>Prime Location</h4><p>Canggu, Bali</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-camera"></i></div><h4>Free Photos & Videos</h4><p>Document your progress</p></div>
             </div>
         </section>
     </div>
@@ -792,16 +684,10 @@
     <div class="container">
         <section>
             <h2 class="section-title">Love From The Ocean</h2>
-            <p class="section-subtitle">Real reviews from real students</p>
+            <p class="section-subtitle">Real experiences from the water</p>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Deni Black really brought the fun of surfing back for me. I had completely lost my confidence, but he took his time, guided me calmly, and taught in a very professional way. Highly recommended!"</p>
-                    <p class="testimonial-author">— Manuel, Google Maps</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Great lessons and vibe in general. Black is a good teacher. Best description of chill vibes: 'Papa, after coffee' :D"</p>
-                    <p class="testimonial-author">— Dennis, Google Maps</p>
-                </div>
+                <div class="testimonial-card"><p class="testimonial-text">"Deni Black really brought the fun of surfing back for me. I had completely lost my confidence, but he took his time, guided me calmly, and taught in a very professional way. Highly recommended!"</p><p class="testimonial-author">— Manuel, Google Maps</p></div>
+                <div class="testimonial-card"><p class="testimonial-text">"Great lessons and vibe in general. Black is a good teacher. Best description of chill vibes: 'Papa, after coffee' :D"</p><p class="testimonial-author">— Dennis, Google Maps</p></div>
             </div>
         </section>
     </div>
@@ -827,7 +713,7 @@
                 <div class="contact-info">
                     <div class="contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/6283169444980?text=Hello!%20I'd%20like%20to%20book%20a%20surf%20lesson" target="_blank">+62 831-6944-4980 (WhatsApp)</a></div>
                     <div class="contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/deniblack_surfcoachbali" target="_blank">@deniblack_surfcoachbali</a></div>
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong>Location:</strong><br>84QJ+MPP, Canggu, Kuta Utara, Bali</div></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div>84QJ+MPP, Canggu, Kuta Utara, Bali</div></div>
                 </div>
                 <div class="map-container">
                     <iframe src="https://maps.google.com/maps?q=84QJ%2BMPP%2C%20Canggu%2C%20Kec.%20Kuta%20Utara%2C%20Kabupaten%20Badung%2C%20Bali%2C%20Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
@@ -843,25 +729,19 @@
             <div class="footer-logo">DENI BLACK <span>SURF SCHOOL</span></div>
             <div class="social-links"><a href="https://www.instagram.com/deniblack_surfcoachbali" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/6283169444980" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
         </div>
-        <div class="copyright">© 2026 Deni Black Surf School | Bali's Premier Surf Coaching Since 2011 | Canggu, Bali</div>
+        <div class="copyright">© 2026 Deni Black Surf School | Bali's Premier Surf Coaching Since 2011</div>
     </div>
 </footer>
 
 <div id="bookingModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Book Your Session</h3>
+        <h3 style="margin-bottom: 20px;">Book Your Session</h3>
         <form id="bookingForm">
             <div class="form-group"><input type="text" id="name" placeholder="Full Name" required></div>
             <div class="form-group"><input type="tel" id="phone" placeholder="WhatsApp Number" required></div>
             <div class="form-group"><input type="date" id="date" required></div>
-            <div class="form-group">
-                <select id="lessonType">
-                    <option value="Kids Lesson (400K IDR)">Kids Lesson (400K IDR)</option>
-                    <option value="Semi-Private (700K IDR)">Semi-Private (700K IDR)</option>
-                    <option value="Private Lesson (450K IDR)">Private Lesson (450K IDR)</option>
-                </select>
-            </div>
+            <div class="form-group"><select id="lessonType"><option>Kids Lesson (400K IDR)</option><option>Semi-Private (700K IDR)</option><option>Private Lesson (450K IDR)</option></select></div>
             <button type="submit" class="btn btn-primary" style="width:100%">Send via WhatsApp →</button>
         </form>
     </div>
@@ -870,18 +750,13 @@
 <script>
     const modal = document.getElementById('bookingModal');
     const lessonSelect = document.getElementById('lessonType');
-    let selectedLesson = null;
-
+    
     document.querySelectorAll('.book-now-trigger').forEach(btn => {
         btn.onclick = (e) => {
             e.preventDefault();
             const card = btn.closest('.lesson-card');
             if (card && card.dataset.lesson) {
-                selectedLesson = card.dataset.lesson;
-                lessonSelect.value = selectedLesson;
-            } else {
-                selectedLesson = null;
-                lessonSelect.selectedIndex = 0;
+                lessonSelect.value = card.dataset.lesson;
             }
             modal.style.display = 'flex';
         };
@@ -900,10 +775,9 @@
         window.open(`https://wa.me/6283169444980?text=${msg}`, '_blank');
         modal.style.display = 'none';
         document.getElementById('bookingForm').reset();
-        lessonSelect.selectedIndex = 0;
     };
 
-    document.getElementById('mobileMenuBtn').onclick = () => { alert('📍 About • Lessons • Moments • Contact'); };
+    document.getElementById('mobileMenuBtn').onclick = () => { alert('About • Lessons • Moments • Contact'); };
 
     document.querySelectorAll('.faq-item').forEach(item => {
         item.querySelector('.faq-question').onclick = () => item.classList.toggle('active');
